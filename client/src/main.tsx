@@ -1,13 +1,21 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { App } from "./App";
-import { ThirdwebProvider } from "thirdweb/react";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 
-createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <ThirdwebProvider>
-      <App />
-    </ThirdwebProvider>
-  </React.StrictMode>
-);
+// import { StateContextProvider } from './context';
+import App from './App';
+import './index.css';
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
+  <ThirdwebProvider activeChain="ethereum" clientId="74cb0a3b114fded21955c1d7d61c79eb"> 
+    <Router>
+      {/* <StateContextProvider>
+        
+      </StateContextProvider> */}
+      <App/>
+    </Router>
+  </ThirdwebProvider> 
+)
