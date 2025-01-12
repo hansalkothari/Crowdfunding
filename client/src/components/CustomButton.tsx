@@ -7,7 +7,7 @@ interface CustomButtonProps {
   styles?: string;
 }
 
-export const CustomButton: React.FC<CustomButtonProps> = ({ btnType, title, handleClick, styles }) => {
+const CustomButton: React.FC<CustomButtonProps> = ({ btnType, title, handleClick, styles }) => {
   return (
     <button
       type={btnType}
@@ -19,4 +19,5 @@ export const CustomButton: React.FC<CustomButtonProps> = ({ btnType, title, hand
   );
 };
 
+export default CustomButton;
 

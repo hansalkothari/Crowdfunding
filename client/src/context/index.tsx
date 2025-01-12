@@ -1,6 +1,7 @@
 import React, { useContext, createContext, ReactNode } from 'react';
 import { useAddress, useContract, useMetamask, useContractWrite, useConnect, metamaskWallet } from '@thirdweb-dev/react';
-import { ethers } from 'ethers';
+import { ethers, BigNumber } from 'ethers';
+
 
 interface FormData {
   title: string;
