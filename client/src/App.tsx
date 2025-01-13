@@ -1,9 +1,6 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Navbar, Sidebar } from './components';
 import { Home, CreateCampaign, CampaignDetails, Profile } from './pages';
-
-// import { CampaignDetails, CreateCampaign, Home, Profile } from './pages';
 
 const App = () => {
   return (

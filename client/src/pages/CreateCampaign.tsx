@@ -19,7 +19,7 @@ interface FormState {
 const CreateCampaign: React.FC = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
-  const { createCampaign } = useStateContext();
+  const { createCampaign, address } = useStateContext();
   const [form, setForm] = useState<FormState>({
     name: '',
     title: '',
@@ -35,7 +35,7 @@ const CreateCampaign: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
+    console.log("form details:",form, "\naccount details:", address);
     checkIfImage(form.image, async (exists: boolean) => {
       if (exists) {
         setIsLoading(true);
